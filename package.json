@@ -1,0 +1,27 @@
+{
+  "name": "auto-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elliewu-space4m/electron-auto-updater.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc --project tsconfig.json && cp -r src/static dist/static && cp src/package.json dist/package.json",
+    "serve": "electron dist",
+    "start": "npm run build && npm run serve",
+    "pack": "electron-builder build --win --publish always",
+    "publish": "npm run build && npm run pack"
+  },
+  "author": "",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "electron-updater": "^4.6.5"
+  },
+  "devDependencies": {
+    "electron": "^17.2.0",
+    "electron-builder": "^22.14.13",
+    "typescript": "^4.6.3"
+  }
+}

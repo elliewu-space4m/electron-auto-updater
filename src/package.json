@@ -1,0 +1,10 @@
+{
+  "name": "custom-sources-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "electron-updater": "^4.6.5"
+  }
+}
